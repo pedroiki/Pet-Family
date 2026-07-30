@@ -1,0 +1,6 @@
+{
+  "name": "Pet Family",
+  "description": "Rede social exclusiva para animais (#NoHumans) e boutique digital inteligente com recomendação por medidas métricas reais.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

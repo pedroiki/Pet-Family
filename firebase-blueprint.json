@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "Registered user accounts in Pet Family (Max 30)",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "required": ["uid", "email", "displayName"]
+    },
+    "pets": {
+      "title": "Pets",
+      "description": "Pets owned by users",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "name": { "type": "string" },
+        "species": { "type": "string" },
+        "breed": { "type": "string" },
+        "weightKg": { "type": "number" },
+        "avatarUrl": { "type": "string" },
+        "bio": { "type": "string" },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "neckCm": { "type": "number" },
+            "chestCm": { "type": "number" },
+            "backCm": { "type": "number" }
+          }
+        },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "name", "species"]
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Community posts in #NoHumans feed",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "petId": { "type": "string" },
+        "petName": { "type": "string" },
+        "petAvatar": { "type": "string" },
+        "petSpecies": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "caption": { "type": "string" },
+        "likesCount": { "type": "number" },
+        "commentsCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  }
+}
